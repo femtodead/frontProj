@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./steles2.css">
+	<title>Shpora</title>
+</head>
+<body>
+
+	<div class="wrapper">
+		<div class="body">
+            <header class="header">
+                <div class="header_banner">
+                    <div class="header_top">
+                        <div class="header_left">
+                            <h1 class="header_siteName">Shpor<span class="header_siteName_end">Galka</span></h1>
+                            <p class="header_description">The fluid, responsive, HTML5, CSS only (image-free) version of the classic free template by MLP Design.</p>
+                        </div>
+                        <dev class="header_right">
+                            <svg class="header_bellActiv" xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24">
+                                <path d="m17,3.5c0-1.93,1.57-3.5,3.5-3.5s3.5,1.57,3.5,3.5-1.57,3.5-3.5,3.5-3.5-1.57-3.5-3.5Zm4.86,6.657c-.189-.807-.996-1.311-1.803-1.117-.807.189-1.307.997-1.117,1.803l1.003,4.263c.128.459.039.92-.252,1.301-.292.383-.722.594-1.208.594H5.516c-.464,0-.896-.205-1.185-.563-.287-.354-.394-.812-.311-1.193l1.983-7.368c.642-2.87,3.159-4.875,6.122-4.875.37,0,.743.033,1.11.099.812.146,1.595-.396,1.74-1.213.146-.815-.397-1.595-1.213-1.74-.54-.097-1.091-.146-1.637-.146C7.748,0,4.027,2.97,3.092,7.158l-1.983,7.367c-.3,1.341.023,2.724.887,3.795.861,1.067,2.144,1.68,3.52,1.68h1.4c.563,2.293,2.617,4,5.084,4s4.521-1.707,5.084-4h1.4c1.422,0,2.731-.646,3.592-1.772.864-1.129,1.14-2.562.772-3.869l-.987-4.201Z" fill="black"/>
+                              </svg>
+                              <svg class="header_bell" xmlns="http://www.w3.org/2000/svg" id="Isolation_Mode" data-name="Isolation Mode" viewBox="0 0 24 24" ><path d="M23.608,17.013l-2.8-10.1A9.443,9.443,0,0,0,2.486,7.4L.321,17.14a2.5,2.5,0,0,0,2.441,3.042H6.905a5.285,5.285,0,0,0,10.154,0H21.2a2.5,2.5,0,0,0,2.409-3.169Zm-20.223.169,2.03-9.137a6.443,6.443,0,0,1,12.5-.326l2.628,9.463Z" fill="black"/></svg>
+                              <button class="header_regIn">Вход</button>
+                        </dev>
+
+                    </div>
+                </div>
+                <div class="header_tabs">
+                    <label for="show_menu" class="header_icon">&#9776;</label>
+                    <input type="checkbox" id="show_menu" role="button">
+                    
+                    
+                    
+                    <input type="radio" class="header_checkbox" id="home-tab" name="tabs" checked>
+                    <label for="home-tab"><div class="header_home">Home</div></label>
+                    <input type="radio"  class="header_checkbox"  id="search-tab" name="tabs">
+                    <label for="search-tab"><div class="header_search">Search</div>
+                    </label>
+                    <input type="radio"  class="header_checkbox"  id="tutorial-tab" name="tabs">
+                    <label for="tutorial-tab"><div class="header_tutorial">Tutorial</div>
+                    </label>
+                </div>
+            </header>
+			<div class="content">
+                <div class="content_home content_active">
+                    home
+                </div>
+                <div class="content_search">
+                    search
+                </div>
+                <div class="content_tutorial">
+                    tutorial
+                </div>
+			</div>
+			<div class="footer">
+				<span class="footer-left">2017 &copy; Copyright <a href="#">Ваше имя</a>. All rights reserved.</span>
+				<span class="footer-right"><a href="#">Контакт</a> | <a href="#">Сайт-карта</a></span>
+				<p class="footer-show">2017 &copy; Copyright <a href="#">Ваше имя</a>. All rights reserved.<br /><a href="#">Контакт</a> | <a href="#">Сайт-карта</a></p>
+			</div>
+		</div>
+		<div class="credits">
+			<span></span>
+		</div>
+        <script>
+const radioButtons = document.querySelectorAll('.header_checkbox');
+radioButtons.forEach(button => {
+  button.addEventListener("change", () => {
+    document.querySelector('.content_active')?.classList.remove('content_active');
+    document.querySelector(".content_"+button.id.split('-')[0])?. classList.add('content_active')
+  });
+});
+        </script>
+	</body>
+</html>

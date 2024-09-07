@@ -1,0 +1,121 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+*{
+    font-family: 'Open Sans', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background: linear-gradient(to bottom, #7c803d 0%, #000000 75%, #000000 100%);
+}
+.wrapper{
+    background: #fff;
+    border: none;
+    padding: 10px;
+    margin: 1% auto;
+    width: 90%;
+}
+.header {
+    background: linear-gradient(to bottom, #abab83 0%, #abab83 0%, #abab83 50%, #a1a172 51%, #a1a172 100%);
+    padding-left: 10px;
+    padding-right: 10px;
+    &_top {
+      display: flex;
+      justify-content: space-between;
+      gap: 17%;
+    }
+    &_description {
+      margin-bottom: 60px;
+    }
+    &_left {}
+    &_right {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        
+    }
+    &_regIn{
+        font-size: 12px;
+        line-height: 18px;
+        cursor: pointer;
+        margin-top: 13.44px;
+        height: 37px;
+        padding: 7px;
+        border-radius: 10px;
+        background-color: #333;
+        color: #999;
+    }
+    &_siteName {
+      font-size: 32px;
+      padding-top: 21.440px;
+      padding-bottom: 21.440px;
+      line-height: 24px;
+      color: #fff;
+      &_end {
+        color: #111;
+      }
+    }
+    &_bellActiv {
+      display: none;
+      height: 20px;
+      margin-top: 21.440px;
+      margin-bottom: 21.440px;
+      cursor: pointer;
+    }
+    &_bell {
+      height: 20px;
+      margin-top: 21.440px;
+      margin-bottom: 21.440px;
+      cursor: pointer;
+    }
+    &_icon {
+      display: none;
+    }
+    &_tabs {
+      display: flex;
+      justify-content: space-around;
+    }
+    &_home,
+    &_search,
+    &_tutorial {
+      padding: 5px 26px;
+      text-decoration: none;
+      font-size: 12px;
+      line-height: 18px;
+      cursor: pointer;
+    }
+    &_checkbox {
+      display: none;
+    }
+    &_checkbox + label{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background-color: #333;
+        color: #999;
+    }
+    &_checkbox:checked + label {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      background-color: #fff;
+      color: #333;
+    }
+
+
+  }
+#show_menu{
+    display: none;
+}
+.content{
+    height: 100vh;
+    &_home{
+        display: none;
+    }
+    &_search{
+        display: none;
+    }
+    &_tutorial{
+        display: none;
+    }
+    &_active{
+        display: block;
+    }
+}
