@@ -43,6 +43,8 @@ body{
         border-radius: 10px;
         background-color: #333;
         color: #999;
+        padding-left: 14px;
+        padding-right: 14px;
     }
     &_siteName {
       font-size: 32px;
@@ -105,7 +107,7 @@ body{
     display: none;
 }
 .content{
-    height: 100vh;
+    position: relative;
     &_home{
         display: none;
     }
@@ -117,5 +119,99 @@ body{
     }
     &_active{
         display: block;
+    }
+    &_funckshen{
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &_list{
+        min-height: 100vh;
+        gap: 10px;
+    }
+    &_cards{
+       
+        width:  100%;
+
+        // justify-content: center;
+        font-size: 1.5em;
+        color: #333;
+        overflow: hidden; 
+        
+        
+    }
+    &_filling{
+        padding: 5px;
+    }
+    &_addButtom{
+        cursor: pointer;
+    }
+    &_interactiveWindow{
+        width: 320px;
+        height: 600px;
+        position: absolute;
+        background-color: wheat;
+        z-index: 1;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+    }
+}
+details {
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+
+    display: block; 
+    background: linear-gradient(to bottom, #7c803d 0%, #000000 75%, #000000 100%);
+    border: 1px solid ;
+    border-radius: 10px;
+    color: white;
+    
+}
+
+details[open] {
+    max-height: none; /* Убираем ограничение на высоту при открытии */
+}
+
+summary {
+    cursor: pointer; 
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
+details:not([open]) {
+    position: relative;
+}
+.hidden {
+    display: none;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+
+
+
+@media (max-width: 375px) {
+    .header_right{
+        display: flex;
+        justify-content: flex-end;
+        /* gap: 10px; */
+        flex-direction: column-reverse;
+        padding-right: 4px;
+    }
+    .header_regIn{
+        padding-left: 7px;
+        padding-right: 7px;
     }
 }
